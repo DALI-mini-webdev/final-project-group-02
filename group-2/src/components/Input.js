@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import firebase from 'firebase/app'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
+import './input.css'
+
+
 class Input extends Component{
     constructor(props){
         super(props);
@@ -35,14 +38,24 @@ class Input extends Component{
     }
     render(){
         return(
-            <div>
-                <p>Enter name of House:</p>
+            <div className='input'>
+                <h2>For Greek Houses:</h2>
+                <p>Enter the name of the House You Want to Add:</p>
                 <input type="text" value={this.state.name} onChange={this.newHouseFunction} />
-
+                <p>Enter the Dates When that House is Open:</p>
                 <input type="text" onChange={this.newDatesFunction} />
 
+                <br></br>
+                <br></br>
                 <button onClick={this.saveNewInfo}>Submit!</button>
-                <Calendar />
+                
+                <div className='student-section'>
+                    <h2>For Students:</h2>
+                </div>
+                <div className="calendar"> 
+                    <Calendar />
+                </div>
+            
             </div>
         )
     }
