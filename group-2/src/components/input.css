@@ -1,0 +1,13 @@
+.input {
+    padding-top: 80px;
+}
+
+.student-section {
+    padding-top: 30px;
+}
+
+.calendar {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
