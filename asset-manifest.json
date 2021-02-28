@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/DALI-mini-webdev.github.io/final-project-group-02/static/css/main.a1b6c62d.chunk.css",
-    "main.js": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/main.2d30de6f.chunk.js",
-    "main.js.map": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/main.2d30de6f.chunk.js.map",
-    "runtime-main.js": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/runtime-main.26b2af43.js",
-    "runtime-main.js.map": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/runtime-main.26b2af43.js.map",
-    "static/css/2.8cebfa1f.chunk.css": "/DALI-mini-webdev.github.io/final-project-group-02/static/css/2.8cebfa1f.chunk.css",
-    "static/js/2.93b99865.chunk.js": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/2.93b99865.chunk.js",
-    "static/js/2.93b99865.chunk.js.map": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/2.93b99865.chunk.js.map",
-    "static/js/3.4e7600eb.chunk.js": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/3.4e7600eb.chunk.js",
-    "static/js/3.4e7600eb.chunk.js.map": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/3.4e7600eb.chunk.js.map",
-    "index.html": "/DALI-mini-webdev.github.io/final-project-group-02/index.html",
-    "static/css/2.8cebfa1f.chunk.css.map": "/DALI-mini-webdev.github.io/final-project-group-02/static/css/2.8cebfa1f.chunk.css.map",
-    "static/css/main.a1b6c62d.chunk.css.map": "/DALI-mini-webdev.github.io/final-project-group-02/static/css/main.a1b6c62d.chunk.css.map",
-    "static/js/2.93b99865.chunk.js.LICENSE.txt": "/DALI-mini-webdev.github.io/final-project-group-02/static/js/2.93b99865.chunk.js.LICENSE.txt"
+    "main.css": "/final-project-group-02/static/css/main.a1b6c62d.chunk.css",
+    "main.js": "/final-project-group-02/static/js/main.2d30de6f.chunk.js",
+    "main.js.map": "/final-project-group-02/static/js/main.2d30de6f.chunk.js.map",
+    "runtime-main.js": "/final-project-group-02/static/js/runtime-main.86e2d6e5.js",
+    "runtime-main.js.map": "/final-project-group-02/static/js/runtime-main.86e2d6e5.js.map",
+    "static/css/2.8cebfa1f.chunk.css": "/final-project-group-02/static/css/2.8cebfa1f.chunk.css",
+    "static/js/2.5d08ef2a.chunk.js": "/final-project-group-02/static/js/2.5d08ef2a.chunk.js",
+    "static/js/2.5d08ef2a.chunk.js.map": "/final-project-group-02/static/js/2.5d08ef2a.chunk.js.map",
+    "static/js/3.4e7600eb.chunk.js": "/final-project-group-02/static/js/3.4e7600eb.chunk.js",
+    "static/js/3.4e7600eb.chunk.js.map": "/final-project-group-02/static/js/3.4e7600eb.chunk.js.map",
+    "index.html": "/final-project-group-02/index.html",
+    "static/css/2.8cebfa1f.chunk.css.map": "/final-project-group-02/static/css/2.8cebfa1f.chunk.css.map",
+    "static/css/main.a1b6c62d.chunk.css.map": "/final-project-group-02/static/css/main.a1b6c62d.chunk.css.map",
+    "static/js/2.5d08ef2a.chunk.js.LICENSE.txt": "/final-project-group-02/static/js/2.5d08ef2a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.26b2af43.js",
+    "static/js/runtime-main.86e2d6e5.js",
     "static/css/2.8cebfa1f.chunk.css",
-    "static/js/2.93b99865.chunk.js",
+    "static/js/2.5d08ef2a.chunk.js",
     "static/css/main.a1b6c62d.chunk.css",
     "static/js/main.2d30de6f.chunk.js"
   ]
