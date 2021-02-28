@@ -11,3 +11,12 @@
     display: flex;
     justify-content: center;
 }
+
+.flex {
+    display: flex;
+    justify-content: center; 
+}
+
+.date {
+    margin-left: 20px
+}
