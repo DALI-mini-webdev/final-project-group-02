@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import firebase from 'firebase/app'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
-import './input.css'
+import './Main.css'
 
-class Input extends Component{
+class Main extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -13,14 +13,10 @@ class Input extends Component{
         }
     }
 
-    newHouseFunction = (event) => {
-        this.setState({name: event.target.value})
-    }
-
     onClickDay = (value) => {
         var temp = String(value)
         var list = this.state.dates  
-        if(list.has(temp)){
+        if (list.has(temp)){
             list.delete(temp) 
         }
         else{
@@ -28,27 +24,27 @@ class Input extends Component{
         }
         this.setState({dates: list})
     }
-    saveNewInfo = () => {
-        if(this.state.name != ''){
-            firebase.firestore().collection('houses').doc(this.state.name).set({
-                name: this.state.name,
-            }, { merge: true }).catch((e) => {
-                console.log(e);
-            });
-            for(let item of this.state.dates){
-                firebase.firestore().collection('houses').doc(this.state.name).set({
-                    dates: firebase.firestore.FieldValue.arrayUnion(item)
-                }, { merge: true }).catch((e) => {
-                    console.log(e);
-                });
-            }
-            this.setState({
-                dates: new Set(),
-                name: ''
+    
+
+    fetchInfo = () => {
+        const dateList = [];
+        firebase.firestore().collection('houses').get()
+            .then(query => {
+                query.forEach(doc => {
+                    console.log(doc.data());
+                    dateList.push(doc.data());
                 })
-        }
-        
+            })
+            .then(() => {
+                this.setState({
+                    allDates: dateList
+                })
+            }).catch((e) => {
+                console.log(e);
+            })
     }
+
+
     render(){
         var list = Array.from(this.state.dates)
         var dateList = list.map((date) => {
@@ -60,18 +56,12 @@ class Input extends Component{
         )
         return(
             <div className='input'>
-                <h2>For Greek Houses:</h2>
-                <p>Enter the name of the House You Want to Add:</p>
-                <input type="text" value={this.state.name} onChange={this.newHouseFunction} />
-                
-                <br></br>
-                <br></br>
-
+                <h2>For Students:</h2>
                 <p>Select Dates:</p>
                 <div className='flex'>
                     <div className="calendar"> 
                         <Calendar onClickDay={this.onClickDay}/>
-                        <button onClick={this.saveNewInfo}>Submit!</button>
+                        <button onClick={this.fetchInfo}>Submit!</button>
                     </div>
                     <div>
                         <p>Selected Dates:</p>
@@ -81,6 +71,7 @@ class Input extends Component{
                 
             </div>
         )
+        
     }
 }
-export default Input
+export default Main
