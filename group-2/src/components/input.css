@@ -2,17 +2,53 @@
     padding-top: 80px;
 }
 
+.button{
+    margin-top: 20px;
+    height: 30px;
+    width: 80px;
+}
 .calendar {
     text-align: center;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .flex {
     display: flex;
-    justify-content: center; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.date {
-    margin-left: 20px
+.select-date {
+    margin-left: 20px;
+    font-weight: bold;
+}
+.date{
+    margin-left:20px;
+    margin-top:10px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+.date:hover{
+    background-color: red;
+    color: white;
+}
+.dates{
+    margin-left:20px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dropdown{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
