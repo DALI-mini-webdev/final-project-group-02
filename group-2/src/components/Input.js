@@ -68,6 +68,7 @@ class Input extends Component{
                 <br></br>
 
                 <p>Select Dates:</p>
+
                 <div className='flex'>
                     <div className="calendar"> 
                         <Calendar onClickDay={this.onClickDay}/>
