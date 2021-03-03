@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
-import firebase from 'firebase/app'
-import Calendar from 'react-calendar'
+import React, { Component } from 'react';
+import firebase from 'firebase/app';
+import Calendar from 'react-calendar';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import 'react-calendar/dist/Calendar.css';
 import './input.css'
 
+const options = ["Tri Kap", "Chi Gam", "TDX", "GDX", "Psi U", "AXA", "Zete", "Heoret", "SAE", "BG", "Phi Delt", "Sig Nu"]
 class Input extends Component{
     constructor(props){
         super(props);
@@ -12,9 +15,8 @@ class Input extends Component{
             dates: new Set()
         }
     }
-
-    newHouseFunction = (event) => {
-        this.setState({name: event.target.value})
+    newHouseFunction = (value) => {
+        this.setState({name: value.value})
     }
 
     onClickDay = (value) => {
@@ -29,9 +31,10 @@ class Input extends Component{
         this.setState({dates: list})
     }
     saveNewInfo = () => {
+        console.log(this.state.name);
         if(this.state.name != ''){
             firebase.firestore().collection('houses').doc(this.state.name).set({
-                name: this.state.name,
+                name: String(this.state.name),
             }, { merge: true }).catch((e) => {
                 console.log(e);
             });
@@ -49,20 +52,25 @@ class Input extends Component{
         }
         
     }
+    deleteDate = (target) => {
+        var list = this.state.dates;
+        console.log(target.target.value)
+        list.delete(target.target.value);
+        this.setState({dates: list})
+    }
     render(){
         var list = Array.from(this.state.dates)
         var dateList = list.map((date) => {
             var str=date
             str=str.substring(0,15)
             return(
-                <p className='date'>{str}</p>
+                <button className ='date' value={date} onClick={this.deleteDate}>{str}</button>
             )}
         )
         return(
             <div className='input'>
                 <h2>For Greek Houses:</h2>
-                <p>Enter the name of the House You Want to Add:</p>
-                <input type="text" value={this.state.name} onChange={this.newHouseFunction} />
+                <Dropdown className='dropdown' options={options} onChange={this.newHouseFunction} value={this.state.name} placeholder="Select a house" />
                 
                 <br></br>
                 <br></br>
@@ -72,11 +80,12 @@ class Input extends Component{
                 <div className='flex'>
                     <div className="calendar"> 
                         <Calendar onClickDay={this.onClickDay}/>
-                        <button onClick={this.saveNewInfo}>Submit!</button>
+                        <button className='button' onClick={this.saveNewInfo}>Submit!</button>
                     </div>
                     <div>
-                        <p>Selected Dates:</p>
-                        {dateList}
+                        <p className="select-date">Selected Dates (Click to remove): </p>
+                        <div className = 'dates'>{dateList}</div>
+                        
                     </div>
                 </div>
                 
