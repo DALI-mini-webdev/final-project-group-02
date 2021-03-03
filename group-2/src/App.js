@@ -10,8 +10,8 @@ import {
   Route,
 } from 'react-router-dom';
 
-var allHouses = ["Tri Kap", "Chi Gam", "TDX", "GDX", "Psi U", "AXA", "Zete", "Heoret", "SAE", "BG", "Phi Delt"]
-var areOpen = ["closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed"]
+var allHouses = ["AXA", "Beta", "BG", "Chi Gam", "GDX", "Heoret", "Phi Delt", "Psi U", "SAE", "Sig Nu", "TDX", "Tri Kap", "Zete", ]
+var areOpen = ["closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed", "closed"]
 
 function HouseList(houseNames) {
   for (var i = 0; i < houseNames.length; i++) {
@@ -85,6 +85,12 @@ function App() {
                 </div>
                 <div id="firstBlockText">
                   {allHouses[10]} <div>{areOpen[10]}</div>
+                </div>
+                <div id="firstBlockText">
+                  {allHouses[11]} <div>{areOpen[11]}</div>
+                </div>
+                <div id="firstBlockText">
+                  {allHouses[12]} <div>{areOpen[12]}</div>
                 </div>
               </div>
             </div>

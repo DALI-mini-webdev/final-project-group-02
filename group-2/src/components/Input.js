@@ -6,7 +6,7 @@ import 'react-dropdown/style.css';
 import 'react-calendar/dist/Calendar.css';
 import './input.css'
 
-const options = ["Tri Kap", "Chi Gam", "TDX", "GDX", "Psi U", "AXA", "Zete", "Heoret", "SAE", "BG", "Phi Delt", "Sig Nu"]
+const options = ["AXA", "Beta", "BG", "Chi Gam", "GDX", "Heoret", "Phi Delt", "Psi U", "SAE", "Sig Nu", "TDX", "Tri Kap", "Zete", ]
 class Input extends Component{
     constructor(props){
         super(props);
